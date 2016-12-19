@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <setting name="logImpl" value="SLF4J" />
+        <!-- changes from the defaults -->
+        <!--         <setting name="lazyLoadingEnabled" value="false" />
+                <setting name="cacheEnabled" value="false"/> -->
+    </settings>
+
+    <typeAliases>
+        <package name="com.jzfq.rms.domain"/>
+    </typeAliases>
+
+    <plugins>
+        <plugin interceptor="com.jzfq.rms.interceptor.PageInterceptor">
+            <property name="dbType" value="mysql"/>
+        </plugin>
+    </plugins>
+
+</configuration>
