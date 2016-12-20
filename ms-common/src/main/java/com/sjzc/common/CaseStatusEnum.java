@@ -25,7 +25,6 @@ public enum CaseStatusEnum {
 	CaseStatusEnum(String caseStatusName) {
 		this.caseStatusName = caseStatusName;	
 	}
-	
 
 	public static CaseStatusEnum getByOrdinal(int i) {
 		CaseStatusEnum[] values = CaseStatusEnum.values();
