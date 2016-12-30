@@ -84,7 +84,7 @@
                                     <td width="195">
                                         <select  id="auditStatus" name="auditStatus">
                                             <option value="">全部</option>
-                                            <spring:eval expression="T(com.jzfq.fms.common.enums.QuotaApprovalStatus).values()" var="quotaApprovalStatus"></spring:eval>
+                                            <spring:eval expression="T(com.sjzc.dms.common.enums.QuotaApprovalStatus).values()" var="quotaApprovalStatus"></spring:eval>
                                             <c:forEach items="${quotaApprovalStatus}" var="quotaStatus">
                                                 <option value="${quotaStatus.ordinal()}">${quotaStatus.quotaApprovalStatusName}</option>
                                             </c:forEach>

@@ -84,7 +84,7 @@
                                     <td width="195">
                                         <select id="orderStatus" name="orderStatus">
                                             <option value="">请选择</option>
-                                            <spring:eval expression="T(com.jzfq.fms.common.enums.PresentOrderStatus).values()" var="presentOrderStatus"></spring:eval>
+                                            <spring:eval expression="T(com.sjzc.dms.common.enums.PresentOrderStatus).values()" var="presentOrderStatus"></spring:eval>
                                             <c:forEach items="${presentOrderStatus}" var="orderStatus">
                                                 <option value="${orderStatus.ordinal()}">${orderStatus.presentOrderStatusName}</option>
                                             </c:forEach>
@@ -100,7 +100,7 @@
                                     <td>
                                         <select id="source" name="source">
                                             <option value="">请选择</option>
-                                            <spring:eval expression="T(com.jzfq.fms.common.enums.PresentOrderSource).values()" var="presentOrderSource"></spring:eval>
+                                            <spring:eval expression="T(com.sjzc.dms.common.enums.PresentOrderSource).values()" var="presentOrderSource"></spring:eval>
                                             <c:forEach items="${presentOrderSource}" var="orderSource">
                                                 <option value="${orderSource.ordinal()}">${orderSource.presentOrderSourceName}</option>
                                             </c:forEach>

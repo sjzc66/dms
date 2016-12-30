@@ -74,7 +74,6 @@
             <version>3.8</version>
         </dependency>
 
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -82,7 +81,7 @@
     </dependencies>
 
     <build>
-        <finalName>rms</finalName>
+        <finalName>dms</finalName>
         <filters>
             <filter>src/main/resources/filter/deploy_config.properties</filter>
             <filter>src/main/resources/filter/deploy_jdbc.properties</filter>

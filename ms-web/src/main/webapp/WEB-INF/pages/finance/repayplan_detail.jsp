@@ -120,7 +120,7 @@
                             <label>还款方式</label>
                             <select id="pattern" name="pattern" class="form-control input-lg" data-parsley-required="true" data-parsley-required-message="还款方式不能为空">
                                 <option value="">请选择</option>
-                                <spring:eval expression="T(com.jzfq.fms.common.enums.RepayPattern).values()" var="repayPattern"></spring:eval>
+                                <spring:eval expression="T(com.sjzc.dms.common.enums.RepayPattern).values()" var="repayPattern"></spring:eval>
                                 <c:forEach items="${repayPattern}" var="pattern">
                                     <option value="${pattern.ordinal()}">${pattern.pattern}</option>
                                 </c:forEach>

@@ -29,10 +29,10 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
           p:dataSource-ref="dataSource" p:configLocation="classpath:mybatis-config.xml"
-          p:mapperLocations="classpath:mapping/*.xml" p:typeAliasesPackage="com.jzfq.fms.domain;"/>
+          p:mapperLocations="classpath:mapping/*.xml" p:typeAliasesPackage="com.sjzc.dms.domain;"/>
     
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"
-          p:basePackage="com.jzfq.fms.dao" p:sqlSessionFactoryBeanName="sqlSessionFactory"/>
+          p:basePackage="com.sjzc.dms.dao" p:sqlSessionFactoryBeanName="sqlSessionFactory"/>
 
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager"

@@ -5,7 +5,7 @@
 
 package com.sjzc.dms.interceptor;
 
-import com.jzfq.fms.common.common.Pageable;
+import com.sjzc.dms.common.common.Pageable;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.ibatis.executor.Executor;

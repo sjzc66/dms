@@ -1,22 +1,6 @@
 package tester;
 
-import com.jzfq.AbstractTest;
-import com.jzfq.fms.domain.PresentOrder;
-import com.jzfq.fms.domain.QuotaApproval;
-import com.jzfq.fms.service.IDGeneratorService;
-import com.jzfq.fms.service.IJdPayService;
-import com.jzfq.fms.service.IPresentOrderService;
-import com.jzfq.fms.service.IQuotaApprovalService;
-
-import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-import java.util.Date;
+import com.sjzc.AbstractTest;
 
 /**
  * Created by huyinglin on 2016/11/25.
@@ -24,7 +8,7 @@ import java.util.Date;
 
 public class InterfaceServiceTest extends AbstractTest {
 
-    private Logger logger= LoggerFactory.getLogger(InterfaceServiceTest.class);
+    /*private Logger logger= LoggerFactory.getLogger(InterfaceServiceTest.class);
 
     @Autowired
     private IQuotaApprovalService quotaApprovalService;
@@ -38,9 +22,9 @@ public class InterfaceServiceTest extends AbstractTest {
     @Autowired
     private IJdPayService IJdPayService;
 
-    /**
+    *//**
      * 额度审批单和用户信息录入测试
-     */
+     *//*
     @Test
     public void insertQuotaApprovalAndCustomerTest(){
         QuotaApproval quotaApproval=new QuotaApproval();
@@ -61,9 +45,9 @@ public class InterfaceServiceTest extends AbstractTest {
         logger.info("录入额度审批和用户信息返回："+status);
     }
 
-    /**
+    *//**
      * 根据订单号修改额度审批状态
-     */
+     *//*
     @Test
     public void updateQuotaApprovalAuditStatusByOrderIdTest(){
         String orderId="123456";
@@ -72,9 +56,9 @@ public class InterfaceServiceTest extends AbstractTest {
         logger.info("修改审核状态返回值："+status);
     }
 
-    /**
+    *//**
      * 提现订单录入
-     */
+     *//*
     @Test
     public void insertPresentOrderTest(){
         PresentOrder presentOrder=new PresentOrder();
@@ -102,6 +86,6 @@ public class InterfaceServiceTest extends AbstractTest {
     public void idGeneratorServiceTest(){
         //888 161207 1415140000
         logger.info("交易流水号生成测试："+idGeneratorService.generate());
-    }
+    }*/
 
 }

@@ -1,16 +1,6 @@
 package tester;
 
-import com.jzfq.AbstractTest;
-import com.jzfq.fms.common.common.PageVo;
-import com.jzfq.fms.domain.SysUser;
-import com.jzfq.fms.service.ISysUserService;
-
-import junit.framework.Assert;
-
-import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.List;
+import com.sjzc.AbstractTest;
 
 /**
  * Created by zhishuo on 9/27/16.
@@ -18,7 +8,7 @@ import java.util.List;
 
 public class SysUserServiceTest extends AbstractTest {
 
-    @Autowired
+    /*@Autowired
     private ISysUserService sysUserService;
 
     @Test
@@ -27,5 +17,5 @@ public class SysUserServiceTest extends AbstractTest {
         PageVo vo = new PageVo();
         List<SysUser> list = sysUserService.findUserList(vo);
         Assert.assertTrue(!list.equals(null));
-    }
+    }*/
 }

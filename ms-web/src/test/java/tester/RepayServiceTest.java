@@ -1,13 +1,6 @@
 package tester;
 
-import com.jzfq.AbstractTest;
-import com.jzfq.fms.domain.RepayPlan;
-import com.jzfq.fms.service.IRepayService;
-
-import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.List;
+import com.sjzc.AbstractTest;
 
 /**
  * Created by zhishuo on 11/9/16.
@@ -15,7 +8,7 @@ import java.util.List;
 
 public class RepayServiceTest extends AbstractTest {
 
-    @Autowired
+    /*@Autowired
     private IRepayService repayService;
 
     @Test
@@ -27,5 +20,5 @@ public class RepayServiceTest extends AbstractTest {
     public void getPlansTest() {
         List<RepayPlan> planList = repayService.getPlanByOrder(1111);
         System.out.println(planList);
-    }
+    }*/
 }

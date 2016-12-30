@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sjzc.dms.dao.SysUserSignRecordMapper">
+  <resultMap id="BaseResultMap" type="com.sjzc.dms.domain.SysUserSignRecord">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="sign_status" jdbcType="TINYINT" property="signStatus" />
+    <result column="sign_time" jdbcType="TIMESTAMP" property="signTime" />
+    <result column="sign_ip" jdbcType="VARCHAR" property="signIp" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_id, sign_status, sign_time, sign_ip
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sys_user_sign_record
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from sys_user_sign_record
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.sjzc.dms.domain.SysUserSignRecord">
+    insert into sys_user_sign_record (id, user_id, sign_status, 
+      sign_time, sign_ip)
+    values (#{id,jdbcType=BIGINT}, #{userId,jdbcType=INTEGER}, #{signStatus,jdbcType=TINYINT}, 
+      #{signTime,jdbcType=TIMESTAMP}, #{signIp,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.sjzc.dms.domain.SysUserSignRecord">
+    insert into sys_user_sign_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="signStatus != null">
+        sign_status,
+      </if>
+      <if test="signTime != null">
+        sign_time,
+      </if>
+      <if test="signIp != null">
+        sign_ip,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="signStatus != null">
+        #{signStatus,jdbcType=TINYINT},
+      </if>
+      <if test="signTime != null">
+        #{signTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="signIp != null">
+        #{signIp,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.sjzc.dms.domain.SysUserSignRecord">
+    update sys_user_sign_record
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="signStatus != null">
+        sign_status = #{signStatus,jdbcType=TINYINT},
+      </if>
+      <if test="signTime != null">
+        sign_time = #{signTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="signIp != null">
+        sign_ip = #{signIp,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.sjzc.dms.domain.SysUserSignRecord">
+    update sys_user_sign_record
+    set user_id = #{userId,jdbcType=INTEGER},
+      sign_status = #{signStatus,jdbcType=TINYINT},
+      sign_time = #{signTime,jdbcType=TIMESTAMP},
+      sign_ip = #{signIp,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

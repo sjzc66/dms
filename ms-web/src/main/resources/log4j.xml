@@ -36,12 +36,12 @@
 		</layout>
 	</appender>
 
-	<logger name="com.jzfq.fms.controller">
+	<logger name="com.sjzc.dms.controller">
 		<level value="${fms.log.level}"/>
 		<appender-ref ref="file"/>
 	</logger>
 	
-	<logger name="com.jzfq.fms.service">
+	<logger name="com.sjzc.dms.service">
 		<level value="${fms.log.level}"/>
 		<appender-ref ref="service_file"/>
 	</logger>

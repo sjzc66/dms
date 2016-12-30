@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sjzc.dms.dao.SysRoleAuthMapper">
+  <resultMap id="BaseResultMap" type="com.sjzc.dms.domain.SysRoleAuthKey">
+    <id column="role_id" jdbcType="INTEGER" property="roleId" />
+    <id column="auth_id" jdbcType="INTEGER" property="authId" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="com.sjzc.dms.domain.SysRoleAuthKey">
+    delete from sys_role_auth
+    where role_id = #{roleId,jdbcType=INTEGER}
+      and auth_id = #{authId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.sjzc.dms.domain.SysRoleAuthKey">
+    insert into sys_role_auth (role_id, auth_id)
+    values (#{roleId,jdbcType=INTEGER}, #{authId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.sjzc.dms.domain.SysRoleAuthKey">
+    insert into sys_role_auth
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="roleId != null">
+        role_id,
+      </if>
+      <if test="authId != null">
+        auth_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="roleId != null">
+        #{roleId,jdbcType=INTEGER},
+      </if>
+      <if test="authId != null">
+        #{authId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+</mapper>

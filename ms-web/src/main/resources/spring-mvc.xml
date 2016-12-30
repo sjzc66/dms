@@ -22,13 +22,13 @@
             </bean>
         </mvc:message-converters>
         <mvc:argument-resolvers>
-            <bean class="com.jzfq.fms.common.DataTableMethodArgumentResolver"/>
+            <bean class="com.sjzc.dms.common.DataTableMethodArgumentResolver"/>
         </mvc:argument-resolvers>
     </mvc:annotation-driven>
-    <bean id="dateFormatMapper" class="com.jzfq.fms.common.DateFormatMapper"></bean>
+    <bean id="dateFormatMapper" class="com.sjzc.dms.common.DateFormatMapper"></bean>
 
 
-    <context:component-scan base-package="com.jzfq.fms">
+    <context:component-scan base-package="com.sjzc.dms">
    		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />   
     	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service" />    
 	</context:component-scan>
