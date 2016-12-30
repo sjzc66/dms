@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="  
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- 这里可以指定实际要操作的DB --> 
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+	    <constructor-arg name="mongo" ref="mongo"/>
+	    <constructor-arg name="databaseName" value="${mongo.database.name}"/>
+	</bean>
+	
+	<!-- 这里需要指定一个Mongo URI来连接数据库，需要的信息可以从阿里云控制台上获取，连接是帐号密码要跟帐号所在的数据库对应起来，否则无法通过认证，默认创建的root帐号是admin数据库下的-->
+	
+	<bean class="com.mongodb.MongoURI" id="mongoURI">
+	    <constructor-arg value="${mongo.database.uri}"  />
+	</bean>
+	
+	<bean class="com.mongodb.Mongo" id="mongo">
+	    <constructor-arg ref="mongoURI" />
+	</bean> 
+
+</beans>

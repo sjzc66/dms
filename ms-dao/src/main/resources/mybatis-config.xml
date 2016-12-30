@@ -12,11 +12,11 @@
     </settings>
 
     <typeAliases>
-        <package name="com.jzfq.rms.domain"/>
+        <package name="com.sjzc.dms.moudle"/>
     </typeAliases>
 
     <plugins>
-        <plugin interceptor="com.jzfq.rms.interceptor.PageInterceptor">
+        <plugin interceptor="com.sjzc.dms.interceptor.PageInterceptor">
             <property name="dbType" value="mysql"/>
         </plugin>
     </plugins>

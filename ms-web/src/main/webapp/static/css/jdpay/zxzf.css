@@ -1,0 +1,154 @@
+/*huankuan*/
+body{
+  background-color:#f1f1f1;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.mt10{
+  margin-top: 10px !important;
+}
+.wrapper {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    position: relative;
+    background-color:#f1f1f1;
+    }
+.web-h1{
+		display: none;
+	}
+.act-wrap{ max-width: 780px; margin: 0 auto; background: #f1f1f1; }
+.xd-top{
+	width: 100%;
+	height:3.3rem;
+	line-height:3.3rem;
+	background-color: #fff;
+  text-align: center;
+  background-color: #ffc741;
+}
+.xd-top .avatar-title{
+	color: #000 !important;
+}
+.return-btn,.xd-back{ display: block; width: 12px; height: 12px; border-top: 2px solid #fff; border-right: 2px solid #fff; -webkit-transform: rotate(225deg); -moz-transform: rotate(225deg); -ms-transform: rotate(225deg); position: absolute; z-index: 999; top: 12px; left: 10px; overflow: hidden; }
+.xd-back{ top: 10px; border-top-color: #333; border-right-color: #333; }
+
+.message2 {
+    margin:0 auto;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #e4e4e4;
+    background-color: #fff;
+}
+.message-tit{
+  font-size: 1.6rem;
+  color: #483126;
+  padding-left: 2%;
+}
+.message-con{
+  font-size: 1.6rem;
+  color: #483126;
+  padding-right: 2%;
+}
+.message-price{
+  color: #ee6a56 !important;
+}
+.tj-btn{
+  display: block;
+  position: fixed;
+  z-index: 2;
+  width: 96%;
+  height: 45px;
+  line-height: 45px;
+  background-color: #ff8200;
+  left: 2%;
+  bottom: 10px;
+  color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+  border-radius: 6px;
+}
+.tj-btn:hover{ background: #d37008; color: #fff; }
+.msg-title{
+    margin: 0 auto;
+    width: 96%;
+    height: 25px;
+    font-size: 1.6rem;
+    color: #686868;
+    text-align: left;
+    padding:2%;
+}
+/**/
+.wrapper{
+  text-align: center;
+}
+.succeed-ico{
+  width: 180px;
+  height: auto;
+  margin: 50px auto 35px;
+}
+.success-tit{
+  width: 100%;
+  height: 45px;
+  line-height: 130%;
+  text-align: center;
+  color: #483126;
+  font-size: 2.2rem;
+  font-family: "Microsoft Yahei";
+}
+.success-zffs{
+  width: 100%;
+  height: 35px;
+  line-height: 130%;
+  text-align: center;
+  color: #483126;
+  font-size: 1.8rem;
+  font-family: "Microsoft Yahei";
+}
+.success-zffs span{
+  color: #ee6a56 !important;
+}
+.success-btn{
+  width: 100%;
+  margin: 10px auto;
+}
+.success-btn a{
+  display: inline-block;
+  width: 140px;
+  height: 44px;
+  line-height: 250%;
+  text-align: center;
+  color: #483126;
+  font-size: 1.8rem;
+  border:1px solid #999;
+  border-radius: 5px;
+  margin-left:5px;
+  margin-right:5px;
+}
+@media(max-width: 320px){
+  .succeed-ico{
+    width: 110px;
+    height: auto;
+    margin: 50px auto 35px;
+  }
+  .success-btn a {
+      display: inline-block;
+      width: 110px;
+      height: 34px;
+      line-height: 160%;
+  }
+}
+.message-tit img{
+  width: 33px;
+  height: auto;
+  margin-top:5px;
+  margin-right:10px;
+}
+.message-tit{
+  text-align: left;
+}
+

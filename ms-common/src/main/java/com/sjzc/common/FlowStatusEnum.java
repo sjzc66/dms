@@ -1,11 +1,14 @@
+/*
 package com.sjzc.common;
 
 import org.apache.commons.lang.StringUtils;
 
+*/
 /**
  * 流程状态 
  *
- */
+ *//*
+
 public enum FlowStatusEnum {
 	
 	STAY_MANAGER_ALLOCATION("待经理分配"),
@@ -43,3 +46,4 @@ public enum FlowStatusEnum {
 	}
 }
 
+*/
