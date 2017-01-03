@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sjzc.dms.dao.SysUserMapper">
-  <resultMap id="BaseResultMap" type="com.sjzc.dms.domain.SysUser">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="username" jdbcType="VARCHAR" property="username" />
-    <result column="real_name" jdbcType="VARCHAR" property="realName" />
-    <result column="password" jdbcType="VARCHAR" property="password" />
-    <result column="position" jdbcType="VARCHAR" property="position" />
-    <result column="sign_status" jdbcType="TINYINT" property="signStatus" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
-    <result column="del_flag" jdbcType="TINYINT" property="delFlag" />
-    <result column="role_id" jdbcType="INTEGER" property="roleId" />
-  </resultMap>
-  <sql id="Base_Column_List">
+    <resultMap id="BaseResultMap" type="com.sjzc.dms.domain.SysUser">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="real_name" jdbcType="VARCHAR" property="realName"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="position" jdbcType="VARCHAR" property="position"/>
+        <result column="sign_status" jdbcType="TINYINT" property="signStatus"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="del_flag" jdbcType="TINYINT" property="delFlag"/>
+        <result column="role_id" jdbcType="INTEGER" property="roleId"/>
+    </resultMap>
+    <sql id="Base_Column_List">
     id, username, real_name, password, position, sign_status, create_time, update_time, 
     del_flag, role_id
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from sys_user
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from sys_user
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from sys_user
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.sjzc.dms.domain.SysUser">
+    <insert id="insert" parameterType="com.sjzc.dms.domain.SysUser">
     insert into sys_user (id, username, real_name, 
       password, position, sign_status, 
       create_time, update_time, del_flag, 
@@ -37,107 +37,107 @@
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{delFlag,jdbcType=TINYINT}, 
       #{roleId,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.sjzc.dms.domain.SysUser">
-    insert into sys_user
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="username != null">
-        username,
-      </if>
-      <if test="realName != null">
-        real_name,
-      </if>
-      <if test="password != null">
-        password,
-      </if>
-      <if test="position != null">
-        position,
-      </if>
-      <if test="signStatus != null">
-        sign_status,
-      </if>
-      <if test="createTime != null">
-        create_time,
-      </if>
-      <if test="updateTime != null">
-        update_time,
-      </if>
-      <if test="delFlag != null">
-        del_flag,
-      </if>
-      <if test="roleId != null">
-        role_id,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="username != null">
-        #{username,jdbcType=VARCHAR},
-      </if>
-      <if test="realName != null">
-        #{realName,jdbcType=VARCHAR},
-      </if>
-      <if test="password != null">
-        #{password,jdbcType=VARCHAR},
-      </if>
-      <if test="position != null">
-        #{position,jdbcType=VARCHAR},
-      </if>
-      <if test="signStatus != null">
-        #{signStatus,jdbcType=TINYINT},
-      </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null">
-        #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="delFlag != null">
-        #{delFlag,jdbcType=TINYINT},
-      </if>
-      <if test="roleId != null">
-        #{roleId,jdbcType=INTEGER},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.sjzc.dms.domain.SysUser">
-    update sys_user
-    <set>
-      <if test="username != null">
-        username = #{username,jdbcType=VARCHAR},
-      </if>
-      <if test="realName != null">
-        real_name = #{realName,jdbcType=VARCHAR},
-      </if>
-      <if test="password != null">
-        password = #{password,jdbcType=VARCHAR},
-      </if>
-      <if test="position != null">
-        position = #{position,jdbcType=VARCHAR},
-      </if>
-      <if test="signStatus != null">
-        sign_status = #{signStatus,jdbcType=TINYINT},
-      </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null">
-        update_time = #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="delFlag != null">
-        del_flag = #{delFlag,jdbcType=TINYINT},
-      </if>
-      <if test="roleId != null">
-        role_id = #{roleId,jdbcType=INTEGER},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.sjzc.dms.domain.SysUser">
+    <insert id="insertSelective" parameterType="com.sjzc.dms.domain.SysUser">
+        insert into sys_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="username != null">
+                username,
+            </if>
+            <if test="realName != null">
+                real_name,
+            </if>
+            <if test="password != null">
+                password,
+            </if>
+            <if test="position != null">
+                position,
+            </if>
+            <if test="signStatus != null">
+                sign_status,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="delFlag != null">
+                del_flag,
+            </if>
+            <if test="roleId != null">
+                role_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="username != null">
+                #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="realName != null">
+                #{realName,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="position != null">
+                #{position,jdbcType=VARCHAR},
+            </if>
+            <if test="signStatus != null">
+                #{signStatus,jdbcType=TINYINT},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="delFlag != null">
+                #{delFlag,jdbcType=TINYINT},
+            </if>
+            <if test="roleId != null">
+                #{roleId,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.sjzc.dms.domain.SysUser">
+        update sys_user
+        <set>
+            <if test="username != null">
+                username = #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="realName != null">
+                real_name = #{realName,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                password = #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="position != null">
+                position = #{position,jdbcType=VARCHAR},
+            </if>
+            <if test="signStatus != null">
+                sign_status = #{signStatus,jdbcType=TINYINT},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="delFlag != null">
+                del_flag = #{delFlag,jdbcType=TINYINT},
+            </if>
+            <if test="roleId != null">
+                role_id = #{roleId,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.sjzc.dms.domain.SysUser">
     update sys_user
     set username = #{username,jdbcType=VARCHAR},
       real_name = #{realName,jdbcType=VARCHAR},
@@ -150,4 +150,52 @@
       role_id = #{roleId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+    <select id="getUserByUserName" resultMap="BaseResultMap" parameterType="string">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM sys_user WHERE username = #{username}
+    </select>
+
+    <select id="findUserList" parameterType="com.jzfq.fms.common.common.PageVo" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM sys_user WHERE del_flag = 0
+        <if test="vo.parameters.username!=null">
+            and username LIKE CONCAT(#{vo.parameters.username},'%' )
+        </if>
+        <if test="vo.parameters.realName!=null">
+            or real_name LIKE CONCAT(#{vo.parameters.realName},'%' )
+        </if>
+        <if test="vo.parameters.position!=null">
+            or position LIKE CONCAT(#{vo.parameters.position},'%' )
+        </if>
+        <if test="vo.sort!=null">
+            order by
+            <if test="vo.sort.username!=null">
+                username ${vo.sort.username}
+            </if>
+            <if test="vo.sort.realName!=null">
+                real_Name ${vo.sort.realName}
+            </if>
+            <if test="vo.sort.password!=null">
+                password ${vo.sort.password}
+            </if>
+            <if test="vo.sort.position!=null">
+                position ${vo.sort.position}
+            </if>
+            <if test="vo.sort.createTime!=null">
+                create_Time ${vo.sort.createTime}
+            </if>
+            <if test="vo.sort.updateTime!=null">
+                update_Time ${vo.sort.updateTime}
+            </if>
+        </if>
+    </select>
+
+    <select id="getUserByUserNameAndPwd" resultMap="BaseResultMap" parameterType="string">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM sys_user WHERE username = #{username} and password = #{pwd}
+    </select>
 </mapper>

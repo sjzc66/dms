@@ -1,4 +1,3 @@
-/*
 
 package com.sjzc.common;
 
@@ -6,13 +5,10 @@ import com.google.common.collect.Lists;
 
 import java.util.List;
 
-*/
 /**
  * DataTables期望的数据格式
  *
- * @author
- *//*
-
+ * @author*/
 public class DataTable<T> {
 
     private Long iTotalRecords;
@@ -45,4 +41,3 @@ public class DataTable<T> {
         this.aaData = aaData;
     }
 }
-*/

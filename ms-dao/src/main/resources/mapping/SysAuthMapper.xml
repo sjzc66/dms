@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sjzc.dms.dao.SysAuthMapper">
-  <resultMap id="BaseResultMap" type="com.sjzc.dms.domain.SysAuth">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="text" jdbcType="VARCHAR" property="text" />
-    <result column="url" jdbcType="VARCHAR" property="url" />
-    <result column="description" jdbcType="VARCHAR" property="description" />
-    <result column="parent_id" jdbcType="INTEGER" property="parentId" />
-    <result column="iconCls" jdbcType="VARCHAR" property="iconcls" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
-    <result column="sort" jdbcType="TINYINT" property="sort" />
-    <result column="del_flag" jdbcType="TINYINT" property="delFlag" />
-    <result column="itemId" jdbcType="VARCHAR" property="itemid" />
-  </resultMap>
-  <sql id="Base_Column_List">
+    <resultMap id="BaseResultMap" type="com.sjzc.dms.domain.SysAuth">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="text" jdbcType="VARCHAR" property="text"/>
+        <result column="url" jdbcType="VARCHAR" property="url"/>
+        <result column="description" jdbcType="VARCHAR" property="description"/>
+        <result column="parent_id" jdbcType="INTEGER" property="parentId"/>
+        <result column="iconCls" jdbcType="VARCHAR" property="iconcls"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="sort" jdbcType="TINYINT" property="sort"/>
+        <result column="del_flag" jdbcType="TINYINT" property="delFlag"/>
+        <result column="itemId" jdbcType="VARCHAR" property="itemid"/>
+    </resultMap>
+    <sql id="Base_Column_List">
     id, text, url, description, parent_id, iconCls, create_time, update_time, sort, del_flag, 
     itemId
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from sys_auth
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from sys_auth
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from sys_auth
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.sjzc.dms.domain.SysAuth">
+    <insert id="insert" parameterType="com.sjzc.dms.domain.SysAuth">
     insert into sys_auth (id, text, url, 
       description, parent_id, iconCls, 
       create_time, update_time, sort, 
@@ -38,116 +38,116 @@
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{sort,jdbcType=TINYINT}, 
       #{delFlag,jdbcType=TINYINT}, #{itemid,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.sjzc.dms.domain.SysAuth">
-    insert into sys_auth
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="text != null">
-        text,
-      </if>
-      <if test="url != null">
-        url,
-      </if>
-      <if test="description != null">
-        description,
-      </if>
-      <if test="parentId != null">
-        parent_id,
-      </if>
-      <if test="iconcls != null">
-        iconCls,
-      </if>
-      <if test="createTime != null">
-        create_time,
-      </if>
-      <if test="updateTime != null">
-        update_time,
-      </if>
-      <if test="sort != null">
-        sort,
-      </if>
-      <if test="delFlag != null">
-        del_flag,
-      </if>
-      <if test="itemid != null">
-        itemId,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="text != null">
-        #{text,jdbcType=VARCHAR},
-      </if>
-      <if test="url != null">
-        #{url,jdbcType=VARCHAR},
-      </if>
-      <if test="description != null">
-        #{description,jdbcType=VARCHAR},
-      </if>
-      <if test="parentId != null">
-        #{parentId,jdbcType=INTEGER},
-      </if>
-      <if test="iconcls != null">
-        #{iconcls,jdbcType=VARCHAR},
-      </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null">
-        #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="sort != null">
-        #{sort,jdbcType=TINYINT},
-      </if>
-      <if test="delFlag != null">
-        #{delFlag,jdbcType=TINYINT},
-      </if>
-      <if test="itemid != null">
-        #{itemid,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.sjzc.dms.domain.SysAuth">
-    update sys_auth
-    <set>
-      <if test="text != null">
-        text = #{text,jdbcType=VARCHAR},
-      </if>
-      <if test="url != null">
-        url = #{url,jdbcType=VARCHAR},
-      </if>
-      <if test="description != null">
-        description = #{description,jdbcType=VARCHAR},
-      </if>
-      <if test="parentId != null">
-        parent_id = #{parentId,jdbcType=INTEGER},
-      </if>
-      <if test="iconcls != null">
-        iconCls = #{iconcls,jdbcType=VARCHAR},
-      </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null">
-        update_time = #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="sort != null">
-        sort = #{sort,jdbcType=TINYINT},
-      </if>
-      <if test="delFlag != null">
-        del_flag = #{delFlag,jdbcType=TINYINT},
-      </if>
-      <if test="itemid != null">
-        itemId = #{itemid,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.sjzc.dms.domain.SysAuth">
+    <insert id="insertSelective" parameterType="com.sjzc.dms.domain.SysAuth">
+        insert into sys_auth
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="text != null">
+                text,
+            </if>
+            <if test="url != null">
+                url,
+            </if>
+            <if test="description != null">
+                description,
+            </if>
+            <if test="parentId != null">
+                parent_id,
+            </if>
+            <if test="iconcls != null">
+                iconCls,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="sort != null">
+                sort,
+            </if>
+            <if test="delFlag != null">
+                del_flag,
+            </if>
+            <if test="itemid != null">
+                itemId,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="text != null">
+                #{text,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null">
+                #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="parentId != null">
+                #{parentId,jdbcType=INTEGER},
+            </if>
+            <if test="iconcls != null">
+                #{iconcls,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="sort != null">
+                #{sort,jdbcType=TINYINT},
+            </if>
+            <if test="delFlag != null">
+                #{delFlag,jdbcType=TINYINT},
+            </if>
+            <if test="itemid != null">
+                #{itemid,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.sjzc.dms.domain.SysAuth">
+        update sys_auth
+        <set>
+            <if test="text != null">
+                text = #{text,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null">
+                url = #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                description = #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="parentId != null">
+                parent_id = #{parentId,jdbcType=INTEGER},
+            </if>
+            <if test="iconcls != null">
+                iconCls = #{iconcls,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="sort != null">
+                sort = #{sort,jdbcType=TINYINT},
+            </if>
+            <if test="delFlag != null">
+                del_flag = #{delFlag,jdbcType=TINYINT},
+            </if>
+            <if test="itemid != null">
+                itemId = #{itemid,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.sjzc.dms.domain.SysAuth">
     update sys_auth
     set text = #{text,jdbcType=VARCHAR},
       url = #{url,jdbcType=VARCHAR},
@@ -161,4 +161,58 @@
       itemId = #{itemid,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+    <!-- 获取顶级菜单 -->
+    <select id="getRootMenu" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from sys_auth where del_flag= 0 and parent_id = 0
+        order by sort
+    </select>
+
+    <!-- 获取子菜单-->
+    <select id="getChildMenu" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from sys_auth where del_flag= 0 and parent_id !=0 and iconCls = 'menu' order by sort
+    </select>
+
+    <!--<select id="queryAllAuth" resultMap="BaseResultMap" >
+      SELECT <include refid="Base_Column_List"/> FROM sys_auth
+      <where>
+        del_flag = 0
+      </where>
+    </select>-->
+
+    <select id="findAuthList" parameterType="com.jzfq.fms.common.common.PageVo" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM sys_auth WHERE del_flag = 0
+        <if test="vo.parameters.text!=null">
+            and text LIKE CONCAT(#{vo.parameters.text},'%' )
+        </if>
+    </select>
+
+    <!--删除sys_role_auth与roleId关联的中间选项-->
+    <delete id="deleteRoleAuthByRoleId" parameterType="java.lang.Integer">
+        delete from sys_role_auth
+        where role_id = #{roleId,jdbcType=INTEGER}
+    </delete>
+
+    <select id="selectChildAuthListByParentId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM sys_auth WHERE del_flag = 0 and parent_id = #{parentId,jdbcType=INTEGER}
+    </select>
+
+    <select id="selectAuthListByRoleId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select distinct text from sys_auth a left join sys_role_auth b on a.id = b.auth_id
+        where a.del_flag = 0
+        <if test="roleList !=null and  roleList.size() > 0 ">
+            and b.role_id in
+            <foreach collection="roleList" item="i" open="(" close=")" separator=",">
+                #{i}
+            </foreach>
+        </if>
+    </select>
 </mapper>

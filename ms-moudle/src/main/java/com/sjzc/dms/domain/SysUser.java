@@ -23,6 +23,17 @@ public class SysUser {
 
     private Integer roleId;
 
+    private String roleIds;
+
+    private Integer[] roleIdList;
+
+    private String roleName;
+    private Byte roleCode;
+
+    //志硕为了安全加密添加的2个字段
+    private String salt;//密码盐
+    private String credentialsSalt;//用户或+盐
+
     public Integer getId() {
         return id;
     }
@@ -101,5 +112,53 @@ public class SysUser {
 
     public void setRoleId(Integer roleId) {
         this.roleId = roleId;
+    }
+
+    public Integer[] getRoleIdList() {
+        return roleIdList;
+    }
+
+    public void setRoleIdList(Integer[] roleIdList) {
+        this.roleIdList = roleIdList;
+    }
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
+
+    public Byte getRoleCode() {
+        return roleCode;
+    }
+
+    public void setRoleCode(Byte roleCode) {
+        this.roleCode = roleCode;
+    }
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
+    public String getCredentialsSalt() {
+        return credentialsSalt;
+    }
+
+    public void setCredentialsSalt(String credentialsSalt) {
+        this.credentialsSalt = credentialsSalt;
+    }
+
+    public String getRoleIds() {
+        return roleIds;
+    }
+
+    public void setRoleIds(String roleIds) {
+        this.roleIds = roleIds;
     }
 }

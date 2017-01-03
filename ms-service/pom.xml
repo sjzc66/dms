@@ -93,11 +93,28 @@
         </dependency>
 
         <!-- json数据 -->
-       <!-- <dependency>
+        <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
             <version>${jackson.version}</version>
-        </dependency>-->
+        </dependency>
+
+        <!-- jedis start-->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${jedis.version}</version>
+        </dependency>
+        <!-- jedis end-->
+
+        <!-- mongodb start -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.0.4</version>
+        </dependency>
+        <!-- mongodb end -->
+
     </dependencies>
 
     <build>

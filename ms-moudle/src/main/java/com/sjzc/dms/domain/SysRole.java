@@ -19,6 +19,10 @@ public class SysRole {
 
     private Byte productCode;
 
+    private String authIds;
+
+    private String[] idList;
+
     public Integer getId() {
         return id;
     }
@@ -81,5 +85,21 @@ public class SysRole {
 
     public void setProductCode(Byte productCode) {
         this.productCode = productCode;
+    }
+
+    public String getAuthIds() {
+        return authIds;
+    }
+
+    public void setAuthIds(String authIds) {
+        this.authIds = authIds;
+    }
+
+    public String[] getIdList() {
+        return idList;
+    }
+
+    public void setIdList(String[] idList) {
+        this.idList = idList;
     }
 }
