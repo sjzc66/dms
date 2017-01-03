@@ -20,11 +20,6 @@
         </dependency>
         <dependency>
             <groupId>com.sjzc</groupId>
-            <artifactId>ms-moudle</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sjzc</groupId>
             <artifactId>ms-util</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
@@ -33,7 +28,6 @@
             <artifactId>ms-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
 
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -48,11 +42,11 @@
             <version>${junit.version}</version>
         </dependency>
 
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>3.12</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
@@ -66,17 +60,19 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
+
             <version>2.6.5</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>3.8</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+
         </dependency>
     </dependencies>
 
@@ -85,6 +81,7 @@
         <filters>
             <filter>src/main/resources/filter/deploy_config.properties</filter>
             <filter>src/main/resources/filter/deploy_jdbc.properties</filter>
+
         </filters>
         <resources>
             <resource>

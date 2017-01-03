@@ -93,11 +93,11 @@
         </dependency>
 
         <!-- json数据 -->
-        <dependency>
+       <!-- <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
             <version>${jackson.version}</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
 
     <build>
