@@ -1,7 +1,11 @@
 package com.jzfq.dms.controller;
 
 import com.jzfq.dms.common.JsonResult;
+import com.jzfq.dms.shiro.IncorrectCaptchaException;
 import com.sjzc.dms.domain.SysUser;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 import org.apache.shiro.web.util.WebUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,15 +70,15 @@ public class LoginController {
              user.setUsername(username);
              user.setPassword(password);
              mode.addAttribute("user",user);
-          if (UnknownAccountException.class.getName().equals(loginFailure)) {  
+          if (UnknownAccountException.class.getName().equals(loginFailure)) {
         	  loginMessage.setMsg("用户名或密码不正确");        	  
         	  mode.addAttribute("loginMessage", loginMessage);
         	  return "forward:/index";
-          } else if (IncorrectCredentialsException.class.getName().equals(loginFailure)) {                    
+          } else if (IncorrectCredentialsException.class.getName().equals(loginFailure)) {
         	  loginMessage.setMsg("用户名或密码不正确");
         	  mode.addAttribute("loginMessage", loginMessage);
         	  return "forward:/index";
-          }else if(IncorrectCaptchaException.class.getName().equals(loginFailure)){  
+          }else if(IncorrectCaptchaException.class.getName().equals(loginFailure)){
         	  loginMessage.setMsg("验证码不正确");
         	  mode.addAttribute("loginMessage", loginMessage);
         	  return "forward:/index"; 
