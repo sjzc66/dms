@@ -13,7 +13,7 @@
         <module>ms-dao</module>
         <module>ms-service</module>
         <module>ms-web</module>
-        <module>ms-util</module>
+        <module>ms-rpc</module>
         <module>ms-common</module>
     </modules>
 

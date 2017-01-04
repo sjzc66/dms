@@ -31,11 +31,11 @@
             <artifactId>ms-moudle</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>com.sjzc</groupId>
             <artifactId>ms-util</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>com.sjzc</groupId>
             <artifactId>ms-common</artifactId>

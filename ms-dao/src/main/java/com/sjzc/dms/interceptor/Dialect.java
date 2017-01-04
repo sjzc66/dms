@@ -1,8 +1,7 @@
 
 package com.sjzc.dms.interceptor;
 
-import com.sjzc.dms.common.common.Pageable;
-
+import com.sjzc.common.Pageable;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.ParameterMapping;
 

@@ -19,20 +19,15 @@
     </properties>
 
     <dependencies>
-        <!--<dependency>
+        <dependency>
             <groupId>com.google.code.kaptcha</groupId>
             <artifactId>kaptcha</artifactId>
             <version>2.3.2</version>
-        </dependency>-->
+        </dependency>
 
         <dependency>
             <groupId>com.sjzc</groupId>
             <artifactId>ms-service</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sjzc</groupId>
-            <artifactId>ms-util</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>

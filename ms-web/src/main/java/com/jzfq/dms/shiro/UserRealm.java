@@ -1,8 +1,8 @@
 package com.jzfq.dms.shiro;
 
-import com.jzfq.fraud.common.constants.Constants;
-import com.jzfq.fraud.domain.SysUser;
-import com.jzfq.fraud.service.ISysUserService;
+import com.jzfq.fms.service.ISysUserService;
+import com.sjzc.constants.Constants;
+import com.sjzc.dms.domain.SysUser;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
