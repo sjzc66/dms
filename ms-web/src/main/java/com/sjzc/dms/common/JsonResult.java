@@ -1,4 +1,4 @@
-package com.jzfq.dms.common;
+package com.sjzc.dms.common;
 
 
 public class JsonResult {

@@ -184,7 +184,7 @@
       </where>
     </select>-->
 
-    <select id="findAuthList" parameterType="com.jzfq.fms.common.common.PageVo" resultMap="BaseResultMap">
+    <select id="findAuthList" parameterType="com.sjzc.dms.common.common.PageVo" resultMap="BaseResultMap">
         SELECT
         <include refid="Base_Column_List"/>
         FROM sys_auth WHERE del_flag = 0

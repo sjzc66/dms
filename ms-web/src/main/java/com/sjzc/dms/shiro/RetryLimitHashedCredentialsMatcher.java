@@ -1,4 +1,4 @@
-package com.jzfq.dms.shiro;
+package com.sjzc.dms.shiro;
 
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;

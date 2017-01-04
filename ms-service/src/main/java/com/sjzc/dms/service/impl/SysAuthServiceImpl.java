@@ -1,6 +1,6 @@
-package com.jzfq.fms.service.impl;
+package com.sjzc.dms.service.impl;
 
-import com.jzfq.fms.service.ISysAuthService;
+import com.sjzc.dms.service.ISysAuthService;
 import com.sjzc.common.PageVo;
 import com.sjzc.dms.dao.SysAuthMapper;
 import com.sjzc.dms.domain.SysAuth;

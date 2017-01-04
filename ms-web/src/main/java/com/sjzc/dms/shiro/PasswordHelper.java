@@ -1,4 +1,4 @@
-package com.jzfq.dms.shiro;
+package com.sjzc.dms.shiro;
 
 import com.sjzc.dms.domain.SysUser;
 import org.apache.shiro.crypto.RandomNumberGenerator;

@@ -1,7 +1,7 @@
-package com.jzfq.dms.controller;
+package com.sjzc.dms.controller;
 
-import com.jzfq.dms.common.JsonResult;
-import com.jzfq.dms.shiro.IncorrectCaptchaException;
+import com.sjzc.dms.common.JsonResult;
+import com.sjzc.dms.shiro.IncorrectCaptchaException;
 import com.sjzc.dms.domain.SysUser;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;

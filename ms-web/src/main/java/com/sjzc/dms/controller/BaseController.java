@@ -1,6 +1,6 @@
-package com.jzfq.dms.controller;
+package com.sjzc.dms.controller;
 
-import com.jzfq.dms.common.JsonResult;
+import com.sjzc.dms.common.JsonResult;
 import com.sjzc.common.DataTable;
 import com.sjzc.common.PageVo;
 import com.sjzc.common.Pageable;

@@ -1,4 +1,4 @@
-package com.jzfq.fms.redis;
+package com.sjzc.dms.redis;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

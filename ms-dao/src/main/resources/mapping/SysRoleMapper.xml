@@ -134,7 +134,7 @@
     </select>
 
     <!--查询所有的角色-->
-    <select id="queryRoleList" parameterType="com.jzfq.fms.common.common.PageVo" resultMap="BaseResultMap" >
+    <select id="queryRoleList" parameterType="com.sjzc.dms.common.common.PageVo" resultMap="BaseResultMap" >
         SELECT <include refid="Base_Column_List" /> FROM sys_role a where del_flag = 0
         <if test="vo.parameters.name!=null">
             and name LIKE CONCAT(#{vo.parameters.name},'%' )

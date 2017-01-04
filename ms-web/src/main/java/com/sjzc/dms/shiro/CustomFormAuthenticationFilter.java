@@ -1,4 +1,4 @@
-package com.jzfq.dms.shiro;
+package com.sjzc.dms.shiro;
 
 /**
  * Created by zhishuo on 10/28/16.

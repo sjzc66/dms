@@ -3,7 +3,7 @@
          xmlns="http://java.sun.com/xml/ns/javaee"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          id="WebApp_ID" metadata-complete="true" version="3.0">
-    <display-name>fms-web</display-name>
+    <display-name>dms-web</display-name>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
@@ -13,9 +13,8 @@
     </context-param>
     <context-param>
         <param-name>webAppRootKey</param-name>
-        <param-value>fms</param-value>
+        <param-value>dms</param-value>
     </context-param>
-
 
     <!--  *******************生成验证码******************* -->
     <servlet>

@@ -1,8 +1,9 @@
-package com.jzfq.dms.shiro;
+package com.sjzc.dms.shiro;
 
-import com.jzfq.fms.service.ISysUserService;
+
 import com.sjzc.constants.Constants;
 import com.sjzc.dms.domain.SysUser;
+import com.sjzc.dms.service.ISysUserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -39,7 +40,7 @@ public class UserRealm extends AuthorizingRealm {
 
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
-    	CaptchaUsernamePasswordToken theToken = (CaptchaUsernamePasswordToken) token;
+    	com.sjzc.dms.shiro.CaptchaUsernamePasswordToken theToken = (com.sjzc.dms.shiro.CaptchaUsernamePasswordToken) token;
 
         String inputCaptcha = theToken.getCaptcha();
         String captcha = (String) SecurityUtils.getSubject().getSession().getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);

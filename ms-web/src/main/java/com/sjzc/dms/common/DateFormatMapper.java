@@ -1,4 +1,4 @@
-package com.jzfq.dms.common;
+package com.sjzc.dms.common;
 
 import org.codehaus.jackson.JsonGenerator;
 import org.codehaus.jackson.JsonProcessingException;

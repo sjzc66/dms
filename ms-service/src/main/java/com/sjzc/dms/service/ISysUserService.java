@@ -1,4 +1,4 @@
-package com.jzfq.fms.service;
+package com.sjzc.dms.service;
 
 import com.sjzc.common.PageVo;
 import com.sjzc.dms.domain.SysUser;

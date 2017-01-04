@@ -157,7 +157,7 @@
         FROM sys_user WHERE username = #{username}
     </select>
 
-    <select id="findUserList" parameterType="com.jzfq.fms.common.common.PageVo" resultMap="BaseResultMap">
+    <select id="findUserList" parameterType="com.sjzc.dms.common.common.PageVo" resultMap="BaseResultMap">
         SELECT
         <include refid="Base_Column_List"/>
         FROM sys_user WHERE del_flag = 0
