@@ -17,7 +17,7 @@
         <module>ms-common</module>
     </modules>
 
-    <name>spring-web-demo</name>
+    <name>ms</name>
     <description>Demo project for Spring WebMvc</description>
 
     <parent>
